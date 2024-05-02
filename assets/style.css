@@ -54,8 +54,8 @@ table {
 	border-spacing: 0;
 }
 body {
-
 }
+
 section {
 	margin-block: 6em;
 }
@@ -104,6 +104,82 @@ header {
 	background-color: var(--secondary-color);
 }
 
+/* adding slideshow */
+.slideshow {
+	width: 100%;
+	min-height: 470px;
+	position: relative;
+	overflow: hidden;
+  }
+
+.slide {
+   width: 400%;
+   height: 100%;
+   display: flex;
+   transition: all 0.3s;
+}
+
+#slide_img {
+	width: 25%; 
+	height: 100%;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+  	align-items: center;
+}
+
+.slide1 { transform: translateX(0); } 
+.slide2 { transform: translateX(-25%); } 
+.slide3 { transform: translateX(-50%); } 
+.slide4 { transform: translateX(-75%); } 
+
+.slide p {
+	font-family: 'Roboto Slab', sans-serif;
+	font-weight: 900;
+	font-size: 50px;
+	line-height: 66px;
+	color: white;
+	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+	text-align: center;
+	width: 100%;
+	position: absolute;
+}
+
+.slide span {
+	display: block;
+	font-weight: 400;
+	font-size: 30px;
+}
+
+.arrow_left {
+	position: absolute;
+	left: 150px;
+	bottom: 50%;
+}
+
+.arrow_right {
+	position: absolute;
+	right: 150px;
+	bottom: 50%;
+}
+.dots {
+	position: absolute;
+	bottom: 40px;
+	display: flex;
+	margin-inline: 5px;
+	width: 13px;
+	height: 13px;
+	background-color: #ffffff00;
+	border: 3px solid #fff;
+	border-radius: 100%;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.dots_selected {
+	background-color: #fff;
+}
+
+
+/*original start*/
 #banner {
 	display: flex;
 	flex-direction: column;
@@ -113,6 +189,7 @@ header {
 	min-height: 470px;
 	position: relative;
 }
+
 .banner-img {
 	position: absolute;
 	width: 100%;
@@ -121,23 +198,19 @@ header {
 	object-fit: cover;
 	object-position: center;
 }
+
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
 /* Gestion des fleches du carrousel */
-#banner .arrow {
-	position: absolute;
-}
-#banner .arrow_left {
-	left: 10px;
-}
-#banner .arrow_right {
-	right: 10px;
-}
-/* Gestion des points du carrousel */
+
+
+
+/* Gestion des points du carrousel 
 .dots {
 	position: absolute;
 	bottom: 40px;
 	display: flex;
 }
+
 .dot {
 	margin-inline: 5px;
 	width: 13px;
@@ -149,8 +222,10 @@ header {
 }
 .dot_selected {
 	background-color: #fff;
-}
+} */
+
 /* Fin du code CSS pour le carousel */
+/*original end*/
 #banner p {
 	font-family: 'Roboto Slab', sans-serif;
 	font-weight: 900;
@@ -178,7 +253,6 @@ header {
 	padding-left:2em;
 	width: 65%;
 	margin-bottom: 1em;
-
 }
 
 #products {
