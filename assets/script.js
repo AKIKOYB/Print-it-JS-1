@@ -29,20 +29,20 @@ function updateSlide() {
 }
 
 next.addEventListener('click', function() {
-    if(current + 1 < slides.length) {
-        current++;
+  if(current + 1 < slides.length) {
+     current++;
     } else {
-        current = 0; 
+      current = 0; 
     }
     updateSlide();
     console.log(slides.length);
 });
 
 preview.addEventListener('click', function() {
-    if(current > 0) {
-        current--;
+  if(current > 0) {
+     current--;
     } else {
-        current = slides.length - 1; 
+      current = slides.length - 1; 
     }
     updateSlide();
     console.log(slides.length - 1);
@@ -52,18 +52,17 @@ function createDots() {
   dotsContainer.innerHTML = '';
 
   slides.forEach((slide, index) => {
-      const dot = document.createElement('div');
-      dot.classList.add('dot');
-      dot.setAttribute('data-index', index);
-      dot.addEventListener('click', function() {
-          current = index;
-          updateSlide();
-          updateDots();
-      });
-      dotsContainer.appendChild(dot);
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    dot.setAttribute('data-index', index);
+    dot.addEventListener('click', function() {
+      current = index;
+      updateSlide();
+      updateDots();
+    });
+    dotsContainer.appendChild(dot);
   });
-
-    updateDots();
+  updateDots();
 }
 
 function updateDots() {
@@ -71,5 +70,4 @@ function updateDots() {
   allDots.forEach(dot => dot.classList.remove('dot_selected'));
   allDots[current].classList.add('dot_selected');
 }
-
-createDots();
+  createDots();
