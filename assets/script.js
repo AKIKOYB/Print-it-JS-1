@@ -25,6 +25,7 @@ function updateSlide() {
   slide.src = slides[current].image;
   const tagLine = document.querySelector('#banner p');
   tagLine.innerHTML = slides[current].tagLine;
+  updateDots();
 }
 
 next.addEventListener('click', function() {
